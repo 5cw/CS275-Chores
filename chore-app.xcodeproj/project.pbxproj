@@ -16,6 +16,9 @@
 		8463EE4127344D8200E789B6 /* chore_appTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8463EE4027344D8200E789B6 /* chore_appTests.swift */; };
 		8463EE4B27344D8200E789B6 /* chore_appUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8463EE4A27344D8200E789B6 /* chore_appUITests.swift */; };
 		8463EE4D27344D8200E789B6 /* chore_appUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8463EE4C27344D8200E789B6 /* chore_appUITestsLaunchTests.swift */; };
+		8463EE5A27344EF900E789B6 /* ItemsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8463EE5927344EF900E789B6 /* ItemsViewController.swift */; };
+		8463EE5C2734546200E789B6 /* Chore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8463EE5B2734546200E789B6 /* Chore.swift */; };
+		8463EE5E2734567500E789B6 /* Roommate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8463EE5D2734567500E789B6 /* Roommate.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -49,6 +52,9 @@
 		8463EE4627344D8200E789B6 /* chore-appUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "chore-appUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		8463EE4A27344D8200E789B6 /* chore_appUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = chore_appUITests.swift; sourceTree = "<group>"; };
 		8463EE4C27344D8200E789B6 /* chore_appUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = chore_appUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		8463EE5927344EF900E789B6 /* ItemsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItemsViewController.swift; sourceTree = "<group>"; };
+		8463EE5B2734546200E789B6 /* Chore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Chore.swift; sourceTree = "<group>"; };
+		8463EE5D2734567500E789B6 /* Roommate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Roommate.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -106,6 +112,9 @@
 				8463EE3227344D8100E789B6 /* Assets.xcassets */,
 				8463EE3427344D8100E789B6 /* LaunchScreen.storyboard */,
 				8463EE3727344D8100E789B6 /* Info.plist */,
+				8463EE5927344EF900E789B6 /* ItemsViewController.swift */,
+				8463EE5B2734546200E789B6 /* Chore.swift */,
+				8463EE5D2734567500E789B6 /* Roommate.swift */,
 			);
 			path = "chore-app";
 			sourceTree = "<group>";
@@ -259,6 +268,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				8463EE2E27344D7D00E789B6 /* ViewController.swift in Sources */,
+				8463EE5E2734567500E789B6 /* Roommate.swift in Sources */,
+				8463EE5A27344EF900E789B6 /* ItemsViewController.swift in Sources */,
+				8463EE5C2734546200E789B6 /* Chore.swift in Sources */,
 				8463EE2A27344D7D00E789B6 /* AppDelegate.swift in Sources */,
 				8463EE2C27344D7D00E789B6 /* SceneDelegate.swift in Sources */,
 			);
