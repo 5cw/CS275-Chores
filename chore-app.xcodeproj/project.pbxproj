@@ -9,7 +9,6 @@
 /* Begin PBXBuildFile section */
 		8463EE2A27344D7D00E789B6 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8463EE2927344D7D00E789B6 /* AppDelegate.swift */; };
 		8463EE2C27344D7D00E789B6 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8463EE2B27344D7D00E789B6 /* SceneDelegate.swift */; };
-		8463EE2E27344D7D00E789B6 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8463EE2D27344D7D00E789B6 /* ViewController.swift */; };
 		8463EE3127344D7D00E789B6 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8463EE2F27344D7D00E789B6 /* Main.storyboard */; };
 		8463EE3327344D8100E789B6 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8463EE3227344D8100E789B6 /* Assets.xcassets */; };
 		8463EE3627344D8100E789B6 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8463EE3427344D8100E789B6 /* LaunchScreen.storyboard */; };
@@ -18,7 +17,9 @@
 		8463EE4D27344D8200E789B6 /* chore_appUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8463EE4C27344D8200E789B6 /* chore_appUITestsLaunchTests.swift */; };
 		8463EE5A27344EF900E789B6 /* ItemsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8463EE5927344EF900E789B6 /* ItemsViewController.swift */; };
 		8463EE5C2734546200E789B6 /* Chore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8463EE5B2734546200E789B6 /* Chore.swift */; };
-		8463EE5E2734567500E789B6 /* Roommate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8463EE5D2734567500E789B6 /* Roommate.swift */; };
+		C9999A85273712610016448F /* ChoreStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9999A84273712610016448F /* ChoreStore.swift */; };
+		C9999A87273712E10016448F /* RoommateStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9999A86273712E10016448F /* RoommateStore.swift */; };
+		C9999A8927371D9C0016448F /* ChoreCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9999A8827371D9C0016448F /* ChoreCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -42,7 +43,6 @@
 		8463EE2627344D7D00E789B6 /* chore-app.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "chore-app.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		8463EE2927344D7D00E789B6 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		8463EE2B27344D7D00E789B6 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		8463EE2D27344D7D00E789B6 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		8463EE3027344D7D00E789B6 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		8463EE3227344D8100E789B6 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		8463EE3527344D8100E789B6 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -54,7 +54,9 @@
 		8463EE4C27344D8200E789B6 /* chore_appUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = chore_appUITestsLaunchTests.swift; sourceTree = "<group>"; };
 		8463EE5927344EF900E789B6 /* ItemsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItemsViewController.swift; sourceTree = "<group>"; };
 		8463EE5B2734546200E789B6 /* Chore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Chore.swift; sourceTree = "<group>"; };
-		8463EE5D2734567500E789B6 /* Roommate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Roommate.swift; sourceTree = "<group>"; };
+		C9999A84273712610016448F /* ChoreStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChoreStore.swift; sourceTree = "<group>"; };
+		C9999A86273712E10016448F /* RoommateStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoommateStore.swift; sourceTree = "<group>"; };
+		C9999A8827371D9C0016448F /* ChoreCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChoreCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -107,14 +109,15 @@
 			children = (
 				8463EE2927344D7D00E789B6 /* AppDelegate.swift */,
 				8463EE2B27344D7D00E789B6 /* SceneDelegate.swift */,
-				8463EE2D27344D7D00E789B6 /* ViewController.swift */,
 				8463EE2F27344D7D00E789B6 /* Main.storyboard */,
 				8463EE3227344D8100E789B6 /* Assets.xcassets */,
 				8463EE3427344D8100E789B6 /* LaunchScreen.storyboard */,
 				8463EE3727344D8100E789B6 /* Info.plist */,
 				8463EE5927344EF900E789B6 /* ItemsViewController.swift */,
+				C9999A8827371D9C0016448F /* ChoreCell.swift */,
 				8463EE5B2734546200E789B6 /* Chore.swift */,
-				8463EE5D2734567500E789B6 /* Roommate.swift */,
+				C9999A84273712610016448F /* ChoreStore.swift */,
+				C9999A86273712E10016448F /* RoommateStore.swift */,
 			);
 			path = "chore-app";
 			sourceTree = "<group>";
@@ -267,12 +270,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				8463EE2E27344D7D00E789B6 /* ViewController.swift in Sources */,
-				8463EE5E2734567500E789B6 /* Roommate.swift in Sources */,
+				C9999A8927371D9C0016448F /* ChoreCell.swift in Sources */,
 				8463EE5A27344EF900E789B6 /* ItemsViewController.swift in Sources */,
+				C9999A85273712610016448F /* ChoreStore.swift in Sources */,
 				8463EE5C2734546200E789B6 /* Chore.swift in Sources */,
 				8463EE2A27344D7D00E789B6 /* AppDelegate.swift in Sources */,
 				8463EE2C27344D7D00E789B6 /* SceneDelegate.swift in Sources */,
+				C9999A87273712E10016448F /* RoommateStore.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
