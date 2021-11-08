@@ -9,8 +9,11 @@ import Foundation
 import UIKit
 
 class ItemsViewController: UITableViewController {
+    
+    
     var choreStore: ChoreStore!
     var roommateStore: RoommateStore!
+    
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return choreStore.allChores.count
     }
@@ -33,12 +36,52 @@ class ItemsViewController: UITableViewController {
         return cell
     }
     
-    @IBAction func addNewItem(_ sender: UIButton) {
+    override func tableView(_ tableView: UITableView,
+                            commit editingStyle: UITableViewCell.EditingStyle,
+                            forRowAt indexPath: IndexPath) {
+        // If the table view is asking to commit a delete command...
+        if editingStyle == .delete {
+            choreStore.allChores.remove(at: indexPath.row)
 
+            tableView.deleteRows(at: [indexPath], with: .automatic)
+        }
+    }
+    
+    override func tableView(_ tableView: UITableView, moveRowAt sourceIndexPath: IndexPath, to destinationIndexPath: IndexPath) {
+        let moved = choreStore.allChores.remove(at: sourceIndexPath.row)
+        choreStore.allChores.insert(moved, at: destinationIndexPath.row)
+        
+    }
+    
+    @IBAction func addNewItem(_ sender: UIButton) {
+        let path = IndexPath(row: choreStore.allChores.count, section: 0)
+        choreStore.newChore("Croquet", 2, "Days")
+        tableView.insertRows(at: [path], with: .automatic)
+        
     }
 
     @IBAction func toggleEditingMode(_ sender: UIButton) {
         setEditing(!isEditing, animated: true)
+        
         sender.setTitle(isEditing ? "Done" : "Edit", for: .normal)
+        
     }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        switch segue.identifier {
+            case "showChore":
+                // Figure out which row was just tapped
+                if let row = tableView.indexPathForSelectedRow?.row {
+                    let chore = choreStore.allChores[row]
+                    let detailViewController = segue.destination as! DetailViewController
+                    detailViewController.chore = chore
+                    detailViewController.cell = sender as! ChoreCell
+                    
+                }
+            default:
+                preconditionFailure("Unexpected segue identifier.")
+            }
+        print("run")
+    }
+
 }

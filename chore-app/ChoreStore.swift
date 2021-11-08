@@ -9,8 +9,8 @@ import Foundation
 class ChoreStore {
     var allChores = [Chore]()
     
-    @discardableResult func newChore(_ title: String, _ period: TimeInterval) -> Chore {
-        var newR = Chore(title: title, period: period)
+    @discardableResult func newChore(_ title: String, _ num: Int, _ units: String) -> Chore {
+        var newR = Chore(title: title, num: num, units: units)
         allChores.append(newR)
         return newR
     }

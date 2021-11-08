@@ -20,6 +20,7 @@
 		C9999A85273712610016448F /* ChoreStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9999A84273712610016448F /* ChoreStore.swift */; };
 		C9999A87273712E10016448F /* RoommateStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9999A86273712E10016448F /* RoommateStore.swift */; };
 		C9999A8927371D9C0016448F /* ChoreCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9999A8827371D9C0016448F /* ChoreCell.swift */; };
+		C9E2619E27389B1C0047BDEF /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9E2619D27389B1C0047BDEF /* DetailViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -57,6 +58,7 @@
 		C9999A84273712610016448F /* ChoreStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChoreStore.swift; sourceTree = "<group>"; };
 		C9999A86273712E10016448F /* RoommateStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoommateStore.swift; sourceTree = "<group>"; };
 		C9999A8827371D9C0016448F /* ChoreCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChoreCell.swift; sourceTree = "<group>"; };
+		C9E2619D27389B1C0047BDEF /* DetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -118,6 +120,7 @@
 				8463EE5B2734546200E789B6 /* Chore.swift */,
 				C9999A84273712610016448F /* ChoreStore.swift */,
 				C9999A86273712E10016448F /* RoommateStore.swift */,
+				C9E2619D27389B1C0047BDEF /* DetailViewController.swift */,
 			);
 			path = "chore-app";
 			sourceTree = "<group>";
@@ -276,6 +279,7 @@
 				8463EE5C2734546200E789B6 /* Chore.swift in Sources */,
 				8463EE2A27344D7D00E789B6 /* AppDelegate.swift in Sources */,
 				8463EE2C27344D7D00E789B6 /* SceneDelegate.swift in Sources */,
+				C9E2619E27389B1C0047BDEF /* DetailViewController.swift in Sources */,
 				C9999A87273712E10016448F /* RoommateStore.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

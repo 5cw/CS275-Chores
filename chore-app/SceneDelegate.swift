@@ -10,6 +10,7 @@ import UIKit
 class SceneDelegate: UIResponder, UIWindowSceneDelegate {
 
     var window: UIWindow?
+    
 
 
     func scene(_ scene: UIScene, willConnectTo session: UISceneSession, options connectionOptions: UIScene.ConnectionOptions) {
@@ -24,8 +25,8 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         
         itemsController.roommateStore.newRoommate("Lexi")
         
-        itemsController.choreStore.newChore("Trash", 60 * 60 * 24 * 14)
-        itemsController.choreStore.newChore("Laundry", 60 * 60 * 24 * 14)
+        itemsController.choreStore.newChore("Trash", 2, "Week")
+        itemsController.choreStore.newChore("Laundry", 1, "Month")
 
         
         guard let _ = (scene as? UIWindowScene) else { return }
