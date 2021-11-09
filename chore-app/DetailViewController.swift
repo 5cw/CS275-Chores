@@ -169,33 +169,23 @@ class DetailViewController: UIViewController, UIPickerViewDelegate, UIPickerView
     }
     
     func tableView(_ tableView: UITableView, moveRowAt sourceIndexPath: IndexPath, to destinationIndexPath: IndexPath) {
-        let rm : String
-        
-        switch sourceIndexPath.section {
-            case 0:
-                rm = chore.turnOrder.remove(at: sourceIndexPath.row)
-            case 1:
-                let n = offDuty[sourceIndexPath.row]
-                rm = choreStore.allRoommates.remove(at: choreStore.allRoommates.firstIndex(of: n)!)
-            default:
-                rm = "Nobody"
-        }
-        switch destinationIndexPath.section {
-            case 0:
+        switch (sourceIndexPath.section, destinationIndexPath.section) {
+        case (0, _):
+            let rm = chore.turnOrder.remove(at: sourceIndexPath.row)
+            if destinationIndexPath.section == 0 {
                 chore.turnOrder.insert(rm, at: destinationIndexPath.row)
-                updateTurnLabel()
-            case 1:
-                let idx : Int
-                if offDuty.count == 0 || destinationIndexPath.row == 0{
-                    idx = 0
-                } else {
-                    let before = offDuty[destinationIndexPath.row - 1]
-                    idx = choreStore.allRoommates.firstIndex(of: before)!
-                }
-                choreStore.allRoommates.insert(rm, at: idx)
+            }
+        case (1, 0):
+            let rm = offDuty[sourceIndexPath.row]
+            chore.turnOrder.insert(rm, at: destinationIndexPath.row)
         default:
-            preconditionFailure("Invalid section")
+            let toMove = choreStore.allRoommates.firstIndex(of: offDuty[sourceIndexPath.row]) ?? 0
+            let afterString = offDuty[destinationIndexPath.row]
+            let rm = choreStore.allRoommates.remove(at: toMove)
+            let after = choreStore.allRoommates.firstIndex(of: afterString) ?? 0
+            choreStore.allRoommates.insert(rm, at: after + 1)
         }
+        updateTurnLabel()
         
     }
     
