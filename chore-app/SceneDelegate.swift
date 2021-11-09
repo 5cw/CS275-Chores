@@ -18,15 +18,11 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         // If using a storyboard, the `window` property will automatically be initialized and attached to the scene.
         // This delegate does not imply the connecting scene or session are new (see `application:configurationForConnectingSceneSession` instead).
         
-        let itemsController = window!.rootViewController as! ItemsViewController
+        let root = window!.rootViewController as! UINavigationController
+        let itemsController = root.topViewController as! ItemsViewController
+        
         
         itemsController.choreStore = ChoreStore()
-        itemsController.roommateStore = RoommateStore()
-        
-        itemsController.roommateStore.newRoommate("Lexi")
-        
-        itemsController.choreStore.newChore("Trash", 2, "Week")
-        itemsController.choreStore.newChore("Laundry", 1, "Month")
 
         
         guard let _ = (scene as? UIWindowScene) else { return }
